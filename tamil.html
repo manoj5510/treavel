@@ -1,0 +1,66 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="cardNumber" placeholder="Enter card number"  maxlength="19">
+
+<script>
+const cardInput = document.getElementById("cardNumber");
+
+cardInput.addEventListener("input", function (e) {
+    let value = e.target.value.replace(/\D/g, ""); // remove non-digits
+    
+    // limit to 16 digits
+    value = value.substring(0, 16);
+
+    // add space every 4 digits
+    value = value.replace(/(.{4})/g, "$1 ").trim();
+
+    e.target.value = value;
+});
+</script>
+
+    <input type="text" id="cardNumber" maxlength="19" />
+
+<script>
+document.getElementById('cardNumber').addEventListener('input', function (e) {
+  let value = e.target.value.replace(/\D/g, '');
+  value = value.replace(/(.{4})/g, '$1 ').trim();
+  e.target.value = value;
+}); -->
+<!-- </script>
+    
+</body>
+</html> --> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/* Remove arrows in Chrome, Edge, Safari */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  /* margin: 0; */
+}
+
+/* Remove arrows in Firefox */
+/* input[type="number"] {
+  -moz-appearance: textfield;
+} */
+</style>
+</head>
+<body>
+    <input type="number">
+</body>
+</html>

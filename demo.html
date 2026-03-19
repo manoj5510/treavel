@@ -1,0 +1,53 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+    <video id="bgVideo" autoplay muted loop style="display:none;" src="https://youtu.be/Mu3KUwls96E" type="video/mp4">
+</video>
+</div>
+
+<script>
+const video = document.getElementById('bgVideo');
+video.addEventListener('loadeddata', () => {
+  video.style.display = 'block';
+});
+</script>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>loadeddata Event Example</title>
+</head>
+<body>
+    <video id="myVideo" width="400" autoplay muted loop src="https://youtu.be/eWiPifj3T8g?si=GtVL9cp4xhiCaFf0">
+        Your browser does not support HTML video.
+    </video>
+
+    <script>
+        // Get the video element
+        const video = document.getElementById('myVideo');
+
+        // Add event listener for 'loadeddata'
+        video.addEventListener('loadeddata', function () {
+            console.log('First frame of the video is loaded.');
+            alert('Video data loaded and ready to display first frame!');
+        });
+
+        // Optional: Handle errors
+        video.addEventListener('error', function (e) {
+            console.error('Error loading video:', e);
+        });
+    </script>
+</body>
+</html>

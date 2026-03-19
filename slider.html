@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+  .container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.wrapper {
+  width: 220px;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.box {
+  min-width: 200px;
+  height: 100px;
+  background: coral;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+    </style>
+</head>
+<body>
+    
+
+   <div class="container">
+  <button id="left">◀</button>
+
+  <div class="wrapper">
+    <div class="slider" id="slider">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+    </div>
+  </div>
+
+  <button id="right">▶</button>
+</div>
+
+
+<!-- <script>
+  const slider = document.getElementById("slider");
+  const leftBtn = document.getElementById("left");
+  const rightBtn = document.getElementById("right");
+
+  // Move first box to end
+  rightBtn.addEventListener("click", () => {
+    const firstBox = slider.firstElementChild;
+    slider.appendChild(firstBox);
+  });
+
+  // Move last box to beginning
+  leftBtn.addEventListener("click", () => {
+    const lastBox = slider.lastElementChild;
+    slider.prepend(lastBox);
+  });
+</script> -->
+
+<script>
+  const slider = document.getElementById("slider");
+  const leftBtn = document.getElementById("left");
+  const rightBtn = document.getElementById("right");
+  const boxes = document.querySelectorAll(".box");
+
+  let index = 0;
+  const boxWidth = 220; // width + margin
+
+  rightBtn.addEventListener("click", () => {
+
+    // 1️⃣ First move using translate
+    if (index < boxes.length - 1) {
+      index++;
+      slider.style.transform = `translateX(-${index * boxWidth}px)`;
+    }
+
+    // 2️⃣ Then move first box to end (infinite effect)
+    setTimeout(() => {
+      const firstBox = slider.firstElementChild;
+      slider.appendChild(firstBox);
+
+      slider.style.transition = "none";
+      slider.style.transform = "translateX(0)";
+      index = 0;
+
+      setTimeout(() => {
+        slider.style.transition = "transform 0.4s ease";
+      }, 50);
+    }, 400);
+  });
+
+  leftBtn.addEventListener("click", () => {
+
+    // 1️⃣ Move last box to front first
+    const lastBox = slider.lastElementChild;
+    slider.prepend(lastBox);
+
+    slider.style.transition = "none";
+    slider.style.transform = `translateX(-${boxWidth}px)`;
+
+    setTimeout(() => {
+      slider.style.transition = "transform 0.4s ease";
+      slider.style.transform = "translateX(0)";
+    }, 50);
+  });
+</script>
+<!-- <script>
+    
+  const slider = document.querySelector(".slider");
+  const boxes = document.querySelectorAll(".box");
+  const leftBtn = document.getElementById("left");
+  const rightBtn = document.getElementById("right");
+
+  let index = 0;
+  const boxWidth = 220; // box width + margin
+
+  rightBtn.addEventListener("click", () => {
+    if (index < boxes.length - 1) {
+      index++;
+      slider.style.transform = `translateX(-${index * boxWidth}px)`;
+    }
+  });
+
+  leftBtn.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      slider.style.transform = `translateX(-${index * boxWidth}px)`;
+    }
+  });
+
+</script> -->
+    
+</body>
+</html>

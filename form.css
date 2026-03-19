@@ -1,0 +1,430 @@
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: #e5ece9;
+    min-height:732px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    position: relative;
+    /* flex-wrap: wrap; */
+}
+.boximg{
+      width:48%;
+    height:650px;
+    background-color: rgb(191, 249, 252);
+
+}
+.boximg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.formbox{
+    width:48%;
+    min-height:600px;
+    background-color:white;
+}
+form{
+    width:100%;
+    min-height:400px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      flex-direction: column;
+      padding:10px;
+    
+}
+.title{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.child{
+    width:100%;
+    /* background-color: red; */
+    display: flex;
+    gap:2%
+}
+.pattanni{
+    width: 50%;
+    /* background-color: blueviolet; */
+}
+.perumal{
+   width: 100%;
+    /* background-color: blueviolet;  */
+}
+
+label{
+    display: block;
+    /* margin-bottom: 5px; */
+}
+
+form div input{
+    width:100%;
+    height:40px;    
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid gray;
+    padding:0px 30px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0,0.1);
+}
+form div{
+    position: relative;
+    margin-bottom: 5px;
+    width: 100%;
+}
+label{
+    margin-bottom: 5px;
+}
+
+input:focus{
+    border: 2px solid red;
+}
+
+form div i{
+    position: absolute;
+    padding: 10px;
+}
+.failur-icon,.error{
+    color:red
+}
+.success-icon{
+    color:green
+}
+.error{
+    font-size: 14.5px;
+    margin-top: 5px;
+}
+.succes-icon,.failure-icon{
+    right: 12px;
+    opacity: 0;
+}
+.button{
+    margin-top: 10px;
+    width: 100%;
+    height: 45px;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 8px;
+    color: aliceblue;
+    font-size: 20px;
+    cursor: pointer;
+ box-shadow: 2px 2px 4px rgb(0, 0, 0,0.1);
+    transition: all 0.1s ease;
+}
+.select{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.button:hover{
+    opacity: 0.8;
+}
+
+/* Remove arrows in Chrome, Edge, Safari */
+/* input::-webkit-outer-spin-button, */
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  /* margin: 0; */
+}
+
+/* Remove arrows in Firefox */
+/* input[type="number"] {
+  -moz-appearance: textfield;
+} */
+
+.box{
+    width: 100%;
+    min-height:65px;
+    /* background-color: chartreuse; */
+    display: flex;
+    justify-content: space-between;
+}
+.box1{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+        width: 110px;
+}
+.box2{
+    display: flex;
+    flex-direction: column;
+    gap:3px
+}
+.cal{
+    width:100%;
+    min-height:110px;
+    /* background-color: cadetblue; */
+    display: flex;
+    justify-content: space-between;
+}
+.dis{
+    display: flex;
+    /* background-color: blanchedalmond; */
+
+}
+.btn{
+    width:50px;
+    padding:2px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    background-color: red;
+}
+.wid{
+    width:100px;
+    display: flex;
+    gap:10px
+}
+.wid h4{
+    font-size: 25px;
+}
+.pro{
+    gap:15px
+}
+.box2 h3{
+    font-size: 30px;
+    /* text-align: center; */
+}
+/* .text{
+    justify-content: center;
+    align-items: center;
+} */
+.option{
+    width:700px;
+    min-height:400px;
+    background-color: aliceblue;
+    position: absolute;
+    top:-65%;
+    transition: all 1s;
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.card{
+    width: 100%;
+    height:60%;
+    background-color: aliceblue;
+    display: flex;
+justify-content:center;
+align-items: center;
+}
+.upi{
+    width: 100%;
+    height:35%;
+       background-color: honeydew;
+}
+.cardsection img{
+    width:300px;
+
+}
+.cardform{
+    width:400px;
+    height:100%;
+    background-color:aliceblue;
+    padding:10px;
+     
+}
+.payform div{
+    width:100%;
+    /* padding:15px */
+}
+.upiimg{
+    width:100%;
+       background-color: honeydew;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    flex-wrap: wrap;
+   
+
+}
+.upiimg img{
+    height:100px;
+    width:100px
+}
+.option button{
+
+    width:100px;
+    /* padding:10px 15px; */
+    background-color: red;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    
+}
+.option p{
+    text-align: center;
+}
+/* payment/ */
+
+.payment{
+    width:500px;
+    min-height:230px;
+       background-color: floralwhite;
+    position: absolute;
+    top:-60%;
+    transition: all 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    padding:10px
+}
+.details{
+    width:100%;
+    height:50%;
+    /* background-color: rgb(159, 248, 4); */
+    display:flex ;
+    justify-content: space-between;
+}
+.pay{
+    width:100%;
+    height:50%;
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: space-between;
+}
+.payment button{
+    width:150px;
+    padding:10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 20px;}
+
+
+
+
+/* form validationn in alert */
+#payform{
+    width:100%;
+    min-height:250px;
+    background-color:aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      flex-direction: column;
+      padding:10px;
+    
+}
+.payform div input{
+    width:100%;
+    height:40px;    
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid gray;
+    padding:0px 30px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0,0.1);
+}
+
+label{
+    margin-bottom: 5px;
+}
+
+ .payform input:focus{
+    border: 2px solid red;
+}
+
+form div i{
+    position: absolute;
+    padding: 10px;
+}
+.failur,.er{
+    color:red
+}
+.success{
+    color:green
+}
+.er{
+    font-size: 14.5px;
+    margin-top: 5px;
+}
+.succes,.failure{
+    right: 12px;
+    opacity: 0;
+}
+.gif{
+    width:2%;
+    height:10px;
+    background-color: bisque;
+    position: absolute;
+    z-index: -2;
+    transition: 0.5s all;
+    
+}
+
+.gif img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+
+
+
+@media only screen and (min-width:500px) and (max-width:900px){
+    .container{
+        flex-direction:column
+
+    }
+    .boximg{
+        width:98%
+    }
+    .formbox{
+        width:98%
+    }
+}
+
+@media only screen and (min-width:300px) and (max-width:500px){
+    .container{
+        flex-direction:column
+
+    }
+    .boximg{
+        width:98%
+    }
+    .formbox{
+        width:98%
+    }
+    .child{
+        flex-direction: column;
+    }
+    .pattanni{
+        width:100%
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 716px){
+    .card{
+        flex-direction: column;
+        width:100%
+    }
+    .option{
+        width:100%
+    }
+
+}.cardform{
+    width:100%
+}
+
+@media only screen and (min-width: 300px) and (max-width: 410px){
+   .cardform{
+    width:100%
+}
+
+}
