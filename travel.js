@@ -157,7 +157,7 @@ function  resnav(z){
         re=!re
 
         if(re!=true){
-                 res.style="left:3%"
+                 res.style="left:0%"
                  
                  
         }
